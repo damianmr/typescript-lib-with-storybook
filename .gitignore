@@ -1,0 +1,21 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+# We dont need to keep track of the storybook build.
+# The 'gh-pages' module creates a new branch out of this folder locally.
+/storybook-static
+
+# misc
+.DS_Store
+.vscode
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

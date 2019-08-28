@@ -1,0 +1,89 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "@typescript-eslint"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true,
+      "spread": true,
+      "modules": true,
+      "destructuring": true,
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "16.5"
+    }
+  },
+  "rules": {
+    "prefer-const": "error",
+    "no-var": "error",
+    "no-useless-constructor": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-template": "error",
+    "sort-imports": 0,
+    "consistent-return": "error",
+    "default-case": "error",
+    "eqeqeq": "error",
+    "no-else-return": "error",
+    "no-eq-null": "error",
+    "no-loop-func": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unused-expressions": "error",
+    "yoda": "error",
+    "react/prop-types": 0,
+    "react/default-props-match-prop-types": 1,
+    "react/destructuring-assignment": 0,
+    "react/no-access-state-in-setstate": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-redundant-should-component-update": 1,
+    "react/no-this-in-sfc": 1,
+    "react/no-unused-prop-types": 1,
+    "react/no-unused-state": 1,
+    "react/no-will-update-set-state": 1,
+    "react/require-default-props": 0,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": 1,
+    "react/sort-prop-types": 1,
+    "react/void-dom-elements-no-children": 1,
+    "react/jsx-equals-spacing": [
+      2,
+      "never"
+    ],
+    "react/jsx-handler-names": 0,
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "react/jsx-no-bind": 0,
+    "react/jsx-sort-props": 1,
+    "indent": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/explicit-function-return-type": 0
+  }
+}
