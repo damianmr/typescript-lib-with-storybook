@@ -18,7 +18,7 @@ First you need to make sure you are using the `node` version specified in the `.
 nvm use && npm ci
 ```
 
-Why `npm ci` and not `npm start`? As this project relies on React and some other peer dependencies, it is safer to use `npm ci`, which uses the `package-lock.json` file to download dependencies that in turns adheres to the versions defined in this file. That means that all the developers in the team will share exactly the same versions of all the dependencies in the project. Save `npm install` for cases in which you need to install new dependencies and when you DO want to modify the `package-lock.json`.
+Why `npm ci` and not `npm install`? As this project relies on React and some other peer dependencies, it is safer to use `npm ci`, which uses the `package-lock.json` file to download dependencies that in turns adheres to the versions defined in this file. That means that all the developers in the team will share exactly the same versions of all the dependencies in the project. Save `npm install` for cases in which you need to install new dependencies and when you DO want to modify the `package-lock.json`.
 
 ## Running the Storybook
 
@@ -94,7 +94,6 @@ VSCode is not required to run the project. You can run the code using whatever e
 - Make sure to download the following extensions for VSCode (in brackets is the package name for reference, so you don't install a different extension with a similar name)
   - ESLint (`dbaeumer.vscode-eslint`)
   - AutoTrim (`nathanridley.autotrim`)
-  - styled-jsx Language Server (`andrewrazumovsky.vscode-styled-jsx-languageserver`)
 - With the project folder open in VSCode, save the workspace somewhere in your disk (press `Cmd + Shift + P` and type "Save workspace as").
 - Open the workspace file in whatever editor you want. VSCode itself can be used for this.
 - Add the following settings to your `settings` section in the workspace file. They will allow the ESLint plugin to validate your code and apply corrections automatically (when possible).
@@ -133,3 +132,7 @@ Example of a `workspace.code-workspace` file:
 ```
 
 Most settings are self explanatory but `renderWhitespace` and `renderControlCharacters` will help you a lot when Prettier reports whitespace violations. Feel free to make any change, this setup is provided as a reference.
+
+## Post Install Step
+
+The library `styled-components` doesn't play well with TypeScript definitions. A simple hack described in https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311#issuecomment-560230205 runs on the package's `postinstall` script and deletes ReactNative's module definitions.

@@ -1,10 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "jsx-a11y",
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["jsx-a11y", "react", "@typescript-eslint"],
   "env": {
     "es6": true,
     "node": true,
@@ -67,22 +63,13 @@
     "react/sort-comp": 1,
     "react/sort-prop-types": 1,
     "react/void-dom-elements-no-children": 1,
-    "react/jsx-equals-spacing": [
-      2,
-      "never"
-    ],
+    "react/jsx-equals-spacing": [2, "never"],
     "react/jsx-handler-names": 0,
-    "react/jsx-indent": [
-      2,
-      2
-    ],
+    "react/jsx-indent": [2, 2],
     "react/jsx-no-bind": 0,
     "react/jsx-sort-props": 1,
     "indent": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2
-    ],
+    "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/prefer-interface": 0,
     "@typescript-eslint/explicit-function-return-type": 0
   }
